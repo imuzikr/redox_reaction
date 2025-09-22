@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Untitled</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>용광로 철 제련 시뮬레이션</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-800 text-white flex flex-col items-center justify-center min-h-screen p-4">
+
+    <h1 class="text-4xl font-bold mb-4 text-center">용광로 철 제련 과정 시뮬레이션</h1>
+    <p class="mb-6 text-gray-300">시작 버튼을 눌러 철이 만들어지는 과정을 단계별로 확인해보세요.</p>
+
+    <div class="w-full max-w-5xl flex flex-col lg:flex-row items-center justify-center gap-8">
+        <!-- 시뮬레이션 영역 -->
+        <div class="relative w-[400px] h-[580px] flex items-center justify-center">
+            <div class="furnace" id="furnace">
+                <div class="furnace-top"></div>
+                <div class="hot-air-pipe left"></div>
+                <div class="hot-air-pipe right"></div>
+                <div id="hot-air-container"></div>
+                <div class="liquid-layer molten-iron" id="molten-iron-layer"></div>
+                <div class="tap-hole" style="bottom: 20px; right: -10px;"></div>
+                <div class="molten-iron flow" id="iron-flow" style="bottom: 20px; right: -20px;"></div>
+            </div>
+        </div>
+
+        <!-- 설명 및 제어 영역 -->
+        <div class="w-full lg:w-1/2 p-6 bg-gray-900 rounded-lg shadow-xl">
+            <div id="explanation-card" class="text-center hidden">
+                <h2 id="step-title" class="text-2xl font-bold text-yellow-400 mb-3"></h2>
+                <p id="step-description" class="text-gray-300 mb-4 h-24"></p>
+                <div id="chemical-equation" class="bg-gray-700 text-lg font-mono p-4 rounded-md h-20 flex items-center justify-center"></div>
+            </div>
+            <div class="mt-6 flex gap-4 justify-center">
+                <button id="start-btn" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg text-lg transition duration-300">
+                    시뮬레이션 시작
+                </button>
+                <button id="reset-btn" class="bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-6 rounded-lg text-lg transition duration-300 hidden">
+                    초기화
+                </button>
+                <button id="next-btn" class="bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-lg text-lg transition duration-300 hidden">
+                    다음 단계
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>
